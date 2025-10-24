@@ -1,0 +1,14 @@
+.brandNum{
+    color: #FF121E;
+    font-style: italic;
+}
+.image{
+    width: 40px;
+}
+i{
+    cursor: pointer;
+    transition: all .2s;
+}
+i:hover{
+    transform: scale(1.3);
+}

@@ -1,0 +1,16 @@
+
+.image {
+  object-fit: cover;
+  cursor: pointer;
+}
+.btn {
+  transform: translateY(100px);
+  transition: all 1s;
+}
+
+.product:hover button {
+  transform: translateY(0px);
+}
+a{
+    text-decoration: none;
+}
