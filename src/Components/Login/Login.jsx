@@ -52,7 +52,7 @@ export default function Login() {
     return (
         <>
 
-            <form className="container w-50" onSubmit={formik.handleSubmit}>
+            <form className="container col-md-6 col-12" onSubmit={formik.handleSubmit}>
                 <div className="row g-3">
                     <div className="header col-12">
                         <h2 className='text-success'>Login Now</h2>
@@ -75,7 +75,7 @@ export default function Login() {
                     </div> : null}
 
                     <div className="col-12 d-flex justify-content-between align-items-center">
-                        {isLoading == false ? <button type="submit" className="btn btn-outline-success">Login</button> : <button type="submit" className="btn btn-light" disabled ><i className='fas fa-spinner fa-spin'></i> Login</button>}
+                        {isLoading == false ? <button type="submit" className="btn btn-outline-success me-3">Login</button> : <button type="submit" className="btn btn-light" disabled ><i className='fas fa-spinner fa-spin'></i> Login</button>}
                         <span>Don't Have an account? <NavLink className={currentTheme==="light"?'text-dark':'text-body'} to="/register">Sign up</NavLink></span>
                     </div>
                 </div>

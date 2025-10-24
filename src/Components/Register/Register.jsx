@@ -52,7 +52,7 @@ export default function Register() {
     })
     return (
         <>
-            <form className="container w-50" onSubmit={formik.handleSubmit}>
+            <form className="container col-md-6 col-12" onSubmit={formik.handleSubmit}>
                 <div className="row g-3">
                     <div className="header col-12">
                         <h2 className='text-primary'>Register Now</h2>
@@ -94,7 +94,7 @@ export default function Register() {
                         {formik.errors.rePassword}
                     </div> : null}
                     <div className="col-12 d-flex justify-content-between align-items-center">
-                        {isLoading == false ? <button type="submit" className="btn btn-outline-primary">Register</button> : <button type="submit" className="btn btn-light" disabled ><i className='fas fa-spinner fa-spin'></i> Register</button>}
+                        {isLoading == false ? <button type="submit" className="btn btn-outline-primary me-3">Register</button> : <button type="submit" className="btn btn-light" disabled ><i className='fas fa-spinner fa-spin'></i> Register</button>}
                         <span>Have already account? <NavLink className={currentTheme==="light"?'text-dark':'text-body'} to="/login">Login here</NavLink></span>
                     </div>
                 </div>

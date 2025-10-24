@@ -40,7 +40,7 @@ export default function ProductDetails() {
                             <span className='fw-medium'>{productDetails?.price + " EGP"}</span>
                             <span className='fw-medium'>{productDetails?.ratingsAverage} <i className='fas fa-star text-warning'></i></span>
                         </div>
-                        <div className="row justify-content-between my-3">
+                        <div className="row justify-content-between my-3 g-3">
                             {productDetails?.images?.map((image, index) => {
                                 return <>
                                     <div className="col-4 col-lg-3" key={index}>
