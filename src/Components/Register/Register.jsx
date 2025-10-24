@@ -95,7 +95,7 @@ export default function Register() {
                     </div> : null}
                     <div className="col-12 d-flex justify-content-between align-items-center">
                         {isLoading == false ? <button type="submit" className="btn btn-outline-primary me-3">Register</button> : <button type="submit" className="btn btn-light" disabled ><i className='fas fa-spinner fa-spin'></i> Register</button>}
-                        <span>Have already account? <NavLink className={currentTheme==="light"?'text-dark':'text-body'} to="/login">Login here</NavLink></span>
+                        <span>Have already account? <NavLink className={`${currentTheme==="light"?'text-dark ':'text-body'} text-decoration-underline`} to="/login">Login here</NavLink></span>
                     </div>
                 </div>
             </form>

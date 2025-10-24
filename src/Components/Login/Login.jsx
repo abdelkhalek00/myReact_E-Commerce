@@ -76,7 +76,7 @@ export default function Login() {
 
                     <div className="col-12 d-flex justify-content-between align-items-center">
                         {isLoading == false ? <button type="submit" className="btn btn-outline-success me-3">Login</button> : <button type="submit" className="btn btn-light" disabled ><i className='fas fa-spinner fa-spin'></i> Login</button>}
-                        <span>Don't Have an account? <NavLink className={currentTheme==="light"?'text-dark':'text-body'} to="/register">Sign up</NavLink></span>
+                        <span>Don't Have an account? <NavLink className={`${currentTheme==="light"?'text-dark ':'text-body'} text-decoration-underline`} to="/register">Sign up</NavLink></span>
                     </div>
                 </div>
             </form>
