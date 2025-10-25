@@ -26,7 +26,7 @@ export default function RecentProducts() {
     return (
         <>
             <div className="row g-4 py-3">
-                {recentProducts.map((product) => <div className="col-6 col-md-4 col-lg-3 col-xl-2">
+                {recentProducts.map((product) => <div className="col-sm-12 col-md-4 col-lg-3 col-xl-2">
                     <div className={`overflow-hidden py-2 ${Style.product}`}>
                         <Link to={`/productDetails/${product._id}`} className={currentTheme === 'light' ? `text-dark` : `text-light`}>
                             <img className={`w-100 rounded-4 mb-2 ${Style.image}`} src={product.imageCover} alt={product.title} />
