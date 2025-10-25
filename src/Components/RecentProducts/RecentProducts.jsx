@@ -25,10 +25,13 @@ export default function RecentProducts() {
     }, [])
     return (
         <>
-            <div className="row g-4 py-3">
-                {recentProducts.map((product) => <div className="col-sm-12 col-md-4 col-lg-3 col-xl-2">
+            {recentProducts.length===0 ? <div className={Style.spinner}>
+                <div className={Style.doubleBounce1}></div>
+                <div className={Style.doubleBounce2}></div>
+            </div> : <div className="row g-4 py-3">
+                {recentProducts.map((product, index) => <div className="col-6 col-md-4 col-lg-3 col-xl-2" key={index}>
                     <div className={`overflow-hidden py-2 ${Style.product}`}>
-                        <Link to={`/productDetails/${product._id}`} className={currentTheme === 'light' ? `text-dark` : `text-light`}>
+                        <Link to={`/productDetails/${product._id}/${product.category.name}`} className={currentTheme === 'light' ? `text-dark` : `text-light`}>
                             <img className={`w-100 rounded-4 mb-2 ${Style.image}`} src={product.imageCover} alt={product.title} />
                             <span className='d-block text-danger'>{product.category.name}</span>
                             <h5 className='fw-bold my-2'>{product.title.split(" ").slice(0, 3).join(" ")}</h5>
@@ -40,8 +43,7 @@ export default function RecentProducts() {
                         </Link>
                     </div>
                 </div>)}
-
-            </div>
+            </div>}
         </>
     )
 }

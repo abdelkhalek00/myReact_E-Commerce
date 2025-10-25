@@ -23,7 +23,7 @@ let Router = createBrowserRouter([
       { path: "cart", element: <ProtectedRoute><Cart /></ProtectedRoute> },
       { path: "brands", element: <ProtectedRoute><Brands /></ProtectedRoute> },
       { path: 'categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
-      { path: 'productDetails/:id', element: <ProtectedRoute><ProductDetails/></ProtectedRoute> },
+      { path: 'productDetails/:id/:category', element: <ProtectedRoute><ProductDetails/></ProtectedRoute> },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
       { path: "*", element: <ErrorPage /> }
